@@ -10,14 +10,20 @@
 
   <ion-card *ngFor="let repo of repos">
     <ion-card-content color="primary">
-      <ion-card-title>
+      <p color="dark">
+      <ion-card-title text-center>
         {{repo.name}}
       </ion-card-title>
+      </p>
       <p>{{repo.html_url}}</p>
-      <p>
-        {{repo.language}} <ion-icon name="star">{{repo.stargazers_count}}</ion-icon>
+      <p text-center>
+        <ion-badge color="primary">
+          <ion-icon name="logo-buffer">{{repo.language}}</ion-icon>
+        </ion-badge>
+        <ion-badge color="dark">
+          <ion-icon name="star">Star {{repo.stargazers_count}}</ion-icon>
+        </ion-badge>
       </p>
     </ion-card-content>
-
   </ion-card>
 </ion-content>

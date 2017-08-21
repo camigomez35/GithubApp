@@ -21,10 +21,10 @@
       <ion-card-title>
         {{userInfo.name}}
       </ion-card-title>
-      <p>
         {{userInfo.bio}}
+      <p>
+        <ion-badge color="dark"><ion-icon name="logo-github"></ion-icon> {{userInfo.public_repos}}</ion-badge>
       </p>
-      <ion-icon name="logo-github"> {{userInfo.public_repos}}</ion-icon>
       <button ion-button block [navPush]="repos" [navParams]="{user: userInfo.login}">
           Ver repositorios
       </button>
