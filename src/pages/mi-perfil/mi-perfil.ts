@@ -19,7 +19,8 @@ export class MiPerfilPage {
 
   username:string = ""
   userInfo:any
-  repos:any = HomePage;
+  repos:any = HomePage
+  exist:boolean = false
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
               private _ghService: GitHubServiceProvider) {
@@ -27,7 +28,10 @@ export class MiPerfilPage {
 
   buscarUsuario(){
     this._ghService.buscarUsuario(this.username).then( (response) => {
+      this.exist = true
       this.userInfo = response
+    }).catch( (err) => {
+      this.exist = false
     })
   }
 

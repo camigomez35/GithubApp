@@ -32,9 +32,12 @@ export class GitHubServiceProvider {
         return new Promise((resolve, reject)=> {
           var link:string = this.apiLink + usuario
           this.http.get(link).map(res=>res.json()).subscribe(
-            data => {
+            (data) => {
               this.githubInfo = data
               resolve(this.githubInfo)
+            },
+            (error) => {
+              reject("Error: "+ error)
             })
     })}
 }

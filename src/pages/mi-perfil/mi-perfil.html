@@ -1,12 +1,12 @@
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="dark">
     <ion-title>Dojo Ionic</ion-title>
   </ion-navbar>
 
 </ion-header>
 
-<ion-content padding>
+<ion-content padding text-center>
   <ion-list>
     <ion-item>
       <ion-label stacked>Username</ion-label>
@@ -15,7 +15,7 @@
   </ion-list>
   <button ion-button block (click)="buscarUsuario()">Buscar Usuario</button>
 
-  <ion-card *ngIf="userInfo != nil">
+  <ion-card *ngIf="exist">
     <ion-card-content>
       <img [src]="userInfo.avatar_url" alt="">
       <ion-card-title>
@@ -29,6 +29,14 @@
           Ver repositorios
       </button>
     </ion-card-content>
+  </ion-card>
 
+  <ion-card *ngIf="!exist && userInfo!=nil">
+    <ion-card-content>
+      <img src="https://cms-assets.tutsplus.com/uploads/users/30/posts/25489/image/pac-404.png" alt="">
+      <ion-card-title>
+        User No found
+      </ion-card-title>
+    </ion-card-content>
   </ion-card>
 </ion-content>
