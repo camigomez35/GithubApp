@@ -1,5 +1,5 @@
 # :octocat: GithubApp :octocat:
-Aplicación movil :iphone: que lista los repositorios :page_facing_up: de un usuario determinado :ok_woman:.
+Aplicación movil :iphone: que lista los repositorios :page_facing_up: de un usuario de github determinado :ok_woman:.
 #### Para ejecutar:
 1) Instalar Ionic :computer:
 ```bash
